@@ -7,6 +7,10 @@
     <title>Shoot The Color</title>
 
     <link rel="stylesheet" href="style.css">
+
+    
+    <script src="./javaScirpt files/story.js" defer></script>
+    <script src="./javaScirpt files/main.js" defer></script>
 </head>
 <body>
 
@@ -41,13 +45,13 @@
         </div>
     </div>
 
+    <div class="container">
+        <span style="color: white; ">Score : </span> 
+        <span id="updatedScore">0</span>
+    </div>
 
     <div class="lavels">
         <div class="current">Current : 0</div>
-        <div class="container">
-            <span style="color: white; ">Score : </span> 
-            <span id="updatedScore">0</span>
-        </div>
         <div class="max">Max : 5</div>
     </div>
 
@@ -56,9 +60,6 @@
 </div>
 
     <audio class="song" src="./song/1113.MP3" controls autoplay></audio>
-    
-    <script src="./javaScirpt files/story.js"></script>
-    <script src="./javaScirpt files/main.js"></script>
 
 
 </body>
