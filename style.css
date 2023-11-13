@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
 * {
     box-sizing: border-box;
+    user-select: none;
 }
 body{
     margin: 0;
@@ -206,6 +207,8 @@ h3{
     top: 0;
     left: 0;
 
+    transition: all 1s;
+
     z-index: 80;
 
 }
@@ -230,5 +233,6 @@ h3{
 }
 
 audio {
-    display: none;
+    /* display: none; */
+    opacity: 0;
 }

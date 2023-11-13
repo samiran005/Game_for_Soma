@@ -10,11 +10,11 @@ const storyList = [
 ]
 
 
-const audio = document.querySelector(".song")
+// const audio = document.querySelector(".song")
 
 // audio.play()
-audio.volume = 0.1
-audio.loop = true
+// audio.volume = 0.1
+// audio.loop = true
 
 
 // console.dir(audio)
