@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="bar"></div>
+
     <div class="lavel-box">
         <div class="inside">
             <div class="img"></div>
@@ -19,8 +22,8 @@
     <div class="startingWindow">
         <div class="newgame">
             <div class="background">
-                <h3>Samiran Maity</h3>
-                <button id="button_1st">New Game</button>
+                <h3>Soma Baby</h3>
+                <button id="button_1st">Play Game</button>
             </div>
         </div>
 
@@ -37,16 +40,26 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <span style="color: white; ">Score : </span> 
-        <span id="updatedScore">0</span>
+
+
+    <div class="lavels">
+        <div class="current">Current : 0</div>
+        <div class="container">
+            <span style="color: white; ">Score : </span> 
+            <span id="updatedScore">0</span>
+        </div>
+        <div class="max">Max : 5</div>
     </div>
 
 
 <canvas id="canvas1"></canvas>
 </div>
 
+    <audio class="song" src="./song/1113.MP3" controls autoplay></audio>
+    
     <script src="./javaScirpt files/story.js"></script>
     <script src="./javaScirpt files/main.js"></script>
+
+
 </body>
 </html>

@@ -8,3 +8,11 @@ const storyList = [
     "Immmm Hmmmm, One more to go. I knew it you can do it ooo you are Amazing",
     "I love you So much soma. Will you Marry Me ?? let me know in WhatsApp"
 ]
+
+
+const audio = document.querySelector(".song")
+// audio.play()
+audio.volume = 0.1
+audio.loop = true
+
+// console.dir(audio)

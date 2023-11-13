@@ -114,6 +114,7 @@ let enemySpawnTime = 2000
 
 let deficultyLavel = 0
 let lavelScore = 200
+let LImageNO = 0
 
 function inhit(){
     player = new Player(canvas.width / 2,
@@ -128,6 +129,10 @@ function inhit(){
     updatedScore = 0
     finalScore.innerHTML = updatedScore
     score.innerHTML  = updatedScore
+    LImageNO = 2
+    enemySpawnTime = 2000
+    deficultyLavel = 0
+    lavelScore = 200
 
 }
 
@@ -172,11 +177,10 @@ function spawnEnemies() {
 // *****************************************************
 const lavelImg = document.querySelector(".img")
 const lavelText = document.querySelector(".text")
+const bar = document.querySelector(".bar")
+const current = document.querySelector(".current")
 
-// console.log(lavelImg)
-// console.log(lavelText)
-
-let LImageNO = 0
+let barUnit = 100 / lavelScore
 
 lavelImg.style.backgroundImage = `url(./images/${LImageNO}.png)`
 lavelText.innerText = storyList[LImageNO]
@@ -203,6 +207,8 @@ const lavelUpfucn = ()=>{
     }
 
 }
+
+// console.log(bar)
 
 lavelBox.addEventListener("click", lavelUpfucn)
 
@@ -235,6 +241,13 @@ function animate() {
         }
     })
 
+    // ***************************************************
+    // for bar to show on top
+    barUnit = 100 / lavelScore
+    if(barUnit * updatedScore <= 100){
+        bar.style.width = `${barUnit * updatedScore}%`
+    }
+
     // ********************************************************
     // console.log(updatedScore)
     // let's add some lavel here
@@ -244,11 +257,13 @@ function animate() {
         // console.log(EnemySpawnId)
         clearInterval(EnemySpawnId)
 
-        if(enemySpawnTime > 400){
+        
+        deficultyLavel += 1
+        current.innerText = `Current : ${deficultyLavel}`
+        
+        if(enemySpawnTime > 800){
             enemySpawnTime -= (enemySpawnTime / 10) * 4
         }
-
-        deficultyLavel += 1
 
         if(LImageNO <= storyList.length){
             lavelImg.style.backgroundImage = `url(./images/${LImageNO}.png)`
