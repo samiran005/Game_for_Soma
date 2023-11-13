@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 10px;
+}
+.totalCotainer{
+    position: fixed;
+    left: 0rem;
+    right: 0rem;
+    top: 0rem;
+    bottom: 0rem;
+    background-color: black;
+}
+#canvas1{
+    /* position: absolute; */
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    z-index: 1;
+}
+.container{
+    position: relative;
+    background-color: black;
+    width: auto;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: medium;
+    font-family: sans-serif;
+    user-select: none;
+    
+}
+.NewgameWindow{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.452);
+    display: flex;
+    justify-content: center;
+    color: rgb(166, 108, 194);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    font-family: Comic Sans MS;
+    user-select: none;
+    display: none;
+}
+.background{
+    background-color: white;
+    width: 25rem;
+    height: 15rem;
+    border-radius: 3rem;
+    text-align: center;
+    user-select: none;
+
+}
+h2{
+    margin: 0;
+    padding: 0;
+    font-size: 3.5rem;
+    user-select: none;
+
+}
+p{
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    user-select: none;
+
+}
+#button{
+    background-color: rgb(71, 165, 194);
+    border: 1px solid rgb(25, 59, 70);
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-radius: 3rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    font-family: Ink Free;
+
+
+}
+.startingWindow{
+    /* position: relative; */
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    color: rgb(166, 108, 194);
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    user-select: none;
+}
+#button_1st{
+    background-color: rgb(71, 165, 194);
+    border: .1rem solid rgb(25, 59, 70);
+    margin-top: .3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-radius: 3rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    font-family: Ink Free;
+    font-weight: bold;
+}
+h3{
+    padding-top: 1rem;
+    padding-bottom: 0;
+    font-size: 2.7rem;
+    color:  palevioletred;
+    font-family: Comic Sans MS;
+}
+
+
+/* lavel box */
+.lavel-box {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.438);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 100;
+
+    /* display: none; */
+
+
+}
+
+.lavel-box p {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 30px;
+    color: white;
+}
+
+.inside {
+    display: flex;
+    align-items: flex-end;
+
+    position: relative;
+    left: 0;
+    top: 50%;
+}
+
+.img {
+    width: 40%;
+    height: 300px;
+
+    /* background-color: red; */
+
+    /* background-image: url(./images/1.png); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.text {
+    width: 60%;
+    background-color: tomato;
+    border-radius: 40px;
+
+    font-size: 22px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    color: wheat;
+}
+
+
+
