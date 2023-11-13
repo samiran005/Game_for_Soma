@@ -189,8 +189,6 @@ lavelText.innerText = storyList[LImageNO]
 // lavel System 
 // ----------------
 const lavelUpfucn = ()=>{
-    LImageNO ++
-
     if(LImageNO > 2){
         lavelBox.style.display = "none"
         if(startGame){
@@ -204,6 +202,7 @@ const lavelUpfucn = ()=>{
         lavelImg.style.backgroundImage = `url(./images/${LImageNO}.png)`
         lavelText.innerText = storyList[LImageNO]
         lavelBox.addEventListener("click", lavelUpfucn)
+        LImageNO ++
     }
 
 }
@@ -264,8 +263,9 @@ function animate() {
         if(enemySpawnTime > 800){
             enemySpawnTime -= (enemySpawnTime / 10) * 4
         }
-
+        
         if(LImageNO <= storyList.length){
+            LImageNO ++
             lavelImg.style.backgroundImage = `url(./images/${LImageNO}.png)`
             lavelText.innerText = storyList[LImageNO]
             lavelBox.style.display = "block"
