@@ -10,11 +10,30 @@ const storyList = [
 ]
 
 
-// const audio = document.querySelector(".song")
-
-// audio.play()
-// audio.volume = 0.1
-// audio.loop = true
-
+const audio = document.querySelector(".song")
+audio.volume = 0.1
+audio.loop = true
 
 // console.dir(audio)
+
+
+const playBtn = document.querySelector('.play-pause')
+// console.log(playBtn)
+
+const playFunc = function(e){
+    const playIcon = e.currentTarget.querySelector("i")
+
+    playIcon.classList.toggle("fa-pause")
+    playIcon.classList.toggle("fa-play")
+
+    // paly music ---->
+    if(playIcon.classList.contains("fa-pause")){
+        audio.play()
+    }else{
+        audio.pause()
+    }
+}
+
+playBtn.addEventListener("click", playFunc)
+
+

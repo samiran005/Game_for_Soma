@@ -115,6 +115,7 @@ let enemySpawnTime = 2000
 let deficultyLavel = 0
 let lavelScore = 200
 let LImageNO = 0
+let endMassage = false
 
 function inhit(){
     player = new Player(canvas.width / 2,
@@ -133,6 +134,7 @@ function inhit(){
     enemySpawnTime = 2000
     deficultyLavel = 0
     lavelScore = 200
+    endMassage = false
 
 }
 
@@ -179,6 +181,7 @@ const lavelImg = document.querySelector(".img")
 const lavelText = document.querySelector(".text")
 const bar = document.querySelector(".bar")
 const current = document.querySelector(".current")
+const endPop = document.querySelector(".endMassage")
 
 let barUnit = 100 / lavelScore
 
@@ -191,6 +194,7 @@ lavelText.innerText = storyList[LImageNO]
 const lavelUpfucn = ()=>{
     if(LImageNO > 2){
         lavelBox.style.display = "none"
+        endPop.style.display = "none"
         if(startGame){
             spawnEnemies()
             animate()
@@ -251,7 +255,7 @@ function animate() {
     // console.log(updatedScore)
     // let's add some lavel here
     // -----------------------------------------------------
-    if(updatedScore > lavelScore){
+    if(updatedScore > lavelScore && !endMassage){
         cancelAnimationFrame(animateId)
         // console.log(EnemySpawnId)
         clearInterval(EnemySpawnId)
@@ -264,12 +268,17 @@ function animate() {
             enemySpawnTime -= (enemySpawnTime / 10) * 4
         }
         
-        if(LImageNO <= storyList.length){
+        if(LImageNO < storyList.length - 1){
             LImageNO ++
             lavelImg.style.backgroundImage = `url(./images/${LImageNO}.png)`
             lavelText.innerText = storyList[LImageNO]
             lavelBox.style.display = "block"
             lavelScore = lavelScore * 2
+
+            if(LImageNO == storyList.length - 1){
+                endMassage = true
+                endPop.style.display = "block"
+            }
         }
 
         // console.log(enemySpawnTime)

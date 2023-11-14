@@ -7,6 +7,9 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Comic Neue', cursive;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 html{
     font-size: 10px;
@@ -235,4 +238,42 @@ h3{
 audio {
     /* display: none; */
     opacity: 0;
+}
+
+/* ---------- Audio Button ----------- */
+.play-pause {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    /* background-color: aliceblue; */
+
+    position: absolute;
+    bottom: 25px;
+    right: 50px;
+
+    z-index: 101;
+
+    font-size: 25px;
+    color: white;
+
+    text-align: center;
+    line-height: 50px
+}
+
+
+.endMassage {
+    width: 300px;
+    /* background-color: red; */
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 102;
+
+    font-size: 22px;
+    color: white;
+    text-align: center;
+
+    display: none;
 }
