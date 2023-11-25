@@ -35,7 +35,7 @@ While this game is a personal creation, your feedback is always welcome! If you 
 
 ## License
 
-This project is licensed under the [MIT License](./LICENSE). Feel free to share the game and spread the joy!
+Feel free to share the game and spread the joy!
 
 ---
 
